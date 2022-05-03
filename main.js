@@ -46,8 +46,14 @@ else{
     if(prediction_1=="sad"){
         document.getElementById("update_emoji1").innerHTML="&#128549;";
     }
-    if(prediction_1=="crying"){
+    if(prediction_1=="angry"){
         document.getElementById("update_emoji1").innerHTML="&#128544;";
+    }
+    if(prediction_1=="crying"){
+        document.getElementById("update_emoji1").innerHTML="&#128557;";
+    }
+    if(prediction_1=="shocked"){
+        document.getElementById("update_emoji1").innerHTML="&#128558;";
     }
     if(prediction_2=="happy"){
         document.getElementById("update_emoji1").innerHTML="&#128516;";
@@ -55,8 +61,14 @@ else{
     if(prediction_2=="sad"){
         document.getElementById("update_emoji1").innerHTML="&#128549;";
     }
-    if(prediction_2=="crying"){
+    if(prediction_2=="angry"){
         document.getElementById("update_emoji1").innerHTML="&#128544;";
+    }
+    if(prediction_2=="crying"){
+        document.getElementById("update_emoji1").innerHTML="&#128557;";
+    }
+    if(prediction_2=="shocked"){
+        document.getElementById("update_emoji1").innerHTML="&#128558;";
     }
 }
 }
