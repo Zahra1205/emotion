@@ -14,7 +14,7 @@ function Take_snapshot(){
     });
 }
 console.log("ml5 version:",ml5.version);
-classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/AnpckYcIu/model.json",model_loded);
+classifier=ml5.imageClassifier("https://teachablemachine.withgoogle.com/models/MW6bbcj96//model.json",model_loded);
 function model_loded(){
     console.log("model loded");
 }
@@ -35,6 +35,28 @@ if(error){
 }
 else{
     console.log(result);
-
+    document.getElementById("result_emotionName1").innerHTML=result[0].label;
+    document.getElementById("result_emotionName2").innerHTML=result[1].label;
+    prediction_1=result[0].label;
+    prediction_2=result[1].label;
+    speak();
+    if(prediction_1=="happy"){
+        document.getElementById("update_emoji1").innerHTML="&#128516;";
+    }
+    if(prediction_1=="sad"){
+        document.getElementById("update_emoji1").innerHTML="&#128549;";
+    }
+    if(prediction_1=="crying"){
+        document.getElementById("update_emoji1").innerHTML="&#128544;";
+    }
+    if(prediction_2=="happy"){
+        document.getElementById("update_emoji1").innerHTML="&#128516;";
+    }
+    if(prediction_2=="sad"){
+        document.getElementById("update_emoji1").innerHTML="&#128549;";
+    }
+    if(prediction_2=="crying"){
+        document.getElementById("update_emoji1").innerHTML="&#128544;";
+    }
 }
 }
